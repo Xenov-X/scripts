@@ -120,7 +120,7 @@ def live():
 		print bcolors.WARNING + "\n[-]"+ bcolors.ENDC + " Enabling monitor interface and channel..."
 		subprocess.Popen("airmon-ng check kill", shell=True, stdout=subprocess.PIPE).stdout.read()
 		subprocess.Popen("airmon-ng start "+adapter, shell=True, stdout=subprocess.PIPE).stdout.read()
-		adapter=adapter+"mon"
+		adapter=adapter
 	except:
 		print "\n" + bcolors.FAIL + "[!]" + bcolors.ENDC + " Unable to enable MONITOR mode, exiting.\n"
 	
